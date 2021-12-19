@@ -31,7 +31,9 @@ public class DBHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    public Boolean insert(String nik, String nama, String telepon, String jenis_kelamin, String kondisi_kesehatan, String progress, String keterangan, String is_valid) {
+    public Boolean insert(String nik, String nama, String telepon,
+                          String jenis_kelamin, String kondisi_kesehatan,
+                          String progress, String keterangan, String is_valid) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put("nik", nik);
@@ -68,7 +70,8 @@ public class DBHelper extends SQLiteOpenHelper {
         cv.put("keterangan", keterangan);
         cv.put("is_valid", is_valid);
 
-        long result = db.update("data_vaksin", cv, "nik" + "='" + nik + "'", null);
+        long result = db.update("data_vaksin", cv,
+                "nik" + "='" + nik + "'", null);
         if(result == -1){
             Toast.makeText(context, "Failed", Toast.LENGTH_SHORT).show();
         }else {

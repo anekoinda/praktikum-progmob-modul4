@@ -12,7 +12,6 @@
         app:cardCornerRadius="4dp"
         android:layout_marginBottom="6dp"
         android:id="@+id/data_vaksin">
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
